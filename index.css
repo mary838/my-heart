@@ -1,0 +1,94 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+  height: 100vh;
+}
+
+.heart-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  transform: rotate(-45deg);
+  animation: floatUp 10s infinite linear;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -25px;
+  left: 0;
+}
+
+.heart::after {
+  left: 25px;
+  top: 0;
+}
+
+/* Layer Styles */
+.layer1 {
+  left: 10%;
+  bottom: -10%;
+  animation-duration: 15s;
+  animation-delay: 0s;
+  opacity: 0.8;
+}
+
+.layer2 {
+  left: 30%;
+  bottom: -15%;
+  animation-duration: 12s;
+  animation-delay: 2s;
+  opacity: 0.6;
+}
+
+.layer3 {
+  left: 50%;
+  bottom: -20%;
+  animation-duration: 18s;
+  animation-delay: 4s;
+  opacity: 0.7;
+}
+
+.layer4 {
+  left: 70%;
+  bottom: -25%;
+  animation-duration: 20s;
+  animation-delay: 6s;
+  opacity: 0.5;
+}
+
+.layer5 {
+  left: 90%;
+  bottom: -30%;
+  animation-duration: 22s;
+  animation-delay: 8s;
+  opacity: 0.4;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(-120vh) rotate(-45deg);
+  }
+}
